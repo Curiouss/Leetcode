@@ -9,6 +9,7 @@ def Weight(L):
         return count
     elif L == 0:
         return 0
+
     else:
         if N[L]=='1':
             return 1 + Weight(L-1)
