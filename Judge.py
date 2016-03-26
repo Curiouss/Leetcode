@@ -1,4 +1,4 @@
-###board= [ [ 0 for i in range(25) ] for j in range(25) ]
+board= [ [ 0 for i in range(25) ] for j in range(25) ]
 
 
 def Judge(board,n):
@@ -19,7 +19,7 @@ def Judge(board,n):
             if board[x][y]==board[x+xA*num][x+xB*num]:
                 num = num + 1
             else:
-            num = num -1
+                num = num -1
             Check = False
         counter = counter + 0.5
         Judg[int(counter//1)]=Judg[int(counter//1)]+num
