@@ -7,14 +7,13 @@ def Judge(board,n):
     # n is a 1x2 list [x,y]
     [x,y]=n
     board[x][y]=1 #define this point to 1 to run the function
-    counter1 = 0
+    counter = 0
     Judg = [ 0 for i in range(4) ]
     EightArray = [[1,1],[-1,-1],[1,0],[-1,0],[-1,1],[1,-1],[0,1],[0,-1]]
     for Arraynumber in EightArray:
         [xA,xB]= Arraynumber
         print([xA,xB])
         num=1  # connected numbers
-        counter2 = 0
         Check = 1
         while Check==True:
             if board[x][y]==board[x+xA*num][x+xB*num]:
