@@ -3,6 +3,7 @@ board[9][9]=1
 board[8][8]=1
 board[7][7]=1
 board[11][11]=1
+#write the print board
 
 def Judge(board,n):
     # board is a 25x25 list
