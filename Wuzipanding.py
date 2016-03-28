@@ -1,0 +1,1 @@
+def Judge(board,player,n)
