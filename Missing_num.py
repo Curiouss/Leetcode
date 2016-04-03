@@ -9,3 +9,6 @@ def missingNumber(self, nums):
     NUM = S - N
     t = list(NUM)
     return t[0]
+print("hello world")
+
+missingNumber([],[1,12])
