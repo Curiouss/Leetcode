@@ -22,7 +22,7 @@ def candy(self, ratings):
     #Rating dictionary
     def Nov(ratings):
         List = ratings
-        Set = list(set(List))
+        Set = list(set(ratings))
         R = len(Set)
         res ={}
         for i in range(R):
