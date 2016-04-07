@@ -1,4 +1,3 @@
-#135 Candy
 def candy(self, ratings):
     """
     :type ratings: List[int]
@@ -14,7 +13,7 @@ def candy(self, ratings):
     elif L==1:
        return 1
     elif L==2:
-       if len(set(List))==1:
+       if len(set(ratings))==1:
            return 2
        else:
            return 3
@@ -23,6 +22,7 @@ def candy(self, ratings):
     def Nov(ratings):
         List = ratings
         Set = list(set(ratings))
+        Set.sort()
         R = len(Set)
         res ={}
         for i in range(R):
@@ -30,16 +30,31 @@ def candy(self, ratings):
         return res
 
     # Changes
-
+    count =0
     while ratings != rat:
         rat = ratings[:]
         res = Nov(ratings)
-        for i in range(L):
-            ratings[i]=res[ratings[i]]
+        if count == 0:
+            for i in range(L):
+                ratings[i]=res[ratings[i]]
         ratings.append(2147483648)
+        count +=1
         for i in range(L):
-            ratings[i]=min(min(ratings[i-1],ratings[i+1])+1,ratings[i])
+            if ratings[i]>max(ratings[i-1],ratings[i+1]):
+                ratings[i]=max(ratings[i-1],ratings[i+1])+1
+            elif ratings[i]<min(ratings[i-1],ratings[i+1]):
+                ratings[i]=1
+            elif ratings[i-1]<ratings[i]<=ratings[i+1] or ratings[i+1]<ratings[i]<=ratings[i-1]:
+                ratings[i]=min(ratings[i-1],ratings[i+1])+1
+
+
         ratings = ratings[:-1]
-
-
+        print(ratings)
+        if ratings[-1]<=ratings[-2]:
+            ratings[-1]=1
+        if ratings[0]<=ratings[1]:
+            ratings[0]=1
+        print(ratings)
+    
     return sum(ratings)
+
