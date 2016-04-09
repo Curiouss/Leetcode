@@ -8,7 +8,7 @@ def isPalindrome(self, s):
     j = length - 1
     counter1 = 0
     counter2 = 0
-    if s == "" or s.isalpha() == 0:
+    if s == "":
         return True
     while i + 1 < length and j > 0:
         if s[i].isalpha() == 0:
