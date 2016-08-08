@@ -13,3 +13,6 @@
                     if abs(Rtarget-target)>abs(Sum-target):
                     Rtarget = Sum
         return Rtarget
+
+
+ www.ybjk.com

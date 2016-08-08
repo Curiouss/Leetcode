@@ -28,3 +28,4 @@ def isPalindrome(self, s):
             j -= 1
             counter1 = counter2
     return True
+
